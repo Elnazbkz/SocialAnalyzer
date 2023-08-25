@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-//// class to read the data from the csv file
+//// Define a class to read the data from the csv file
 public class CsvParser {
     private static final String CSV_FILE_NAME = "posts.csv"; // the csv file to load
     private static final String CSV_FILE_PATH = System.getProperty("user.dir") + File.separator + CSV_FILE_NAME; // Define csv file path on the system

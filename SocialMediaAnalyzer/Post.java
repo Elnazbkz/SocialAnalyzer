@@ -75,8 +75,12 @@ public class Post {
         return dateTime.format(formatter);
     }
 
-    @Override
-    public String toString() {
-        return id + " | " + content + " | " + likes;
+    public String toString(boolean topShares) { // return shares or likes for top n posts
+    	if(topShares) {
+    		return id + " | " + content + " | " + shares;
+    	}
+    	else {
+    		return id + " | " + content + " | " + likes;
+    	}
     }
 }

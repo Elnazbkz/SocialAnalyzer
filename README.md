@@ -56,7 +56,7 @@ After running the app, you'll be presented with the main menu. Choose an option 
 Here is an example of the console environment for this java app
 <br/>
 
-`Welcome to Social Media Analyzer!
+```Welcome to Social Media Analyzer!
 ---------------------------------------------------
 > Select from main menu
 ----------------------------------------------------
@@ -152,7 +152,7 @@ The top-2 posts with the most shares are:
 5) Retrieve the top N posts with most shares
 6) Exit
 Please select: 6
-Thanks for using Social Media Analyzer!`
+Thanks for using Social Media Analyzer!```
 
 
 ## Features

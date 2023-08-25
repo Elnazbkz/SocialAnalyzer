@@ -71,7 +71,7 @@ public class Post {
     }
 
     public String getFormattedDateTime() { // format date and time to selected pattern
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"); // cformat of datetime
         return dateTime.format(formatter);
     }
 

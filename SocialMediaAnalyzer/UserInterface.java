@@ -19,11 +19,11 @@ public class UserInterface {
             try { // Load CSV file
                 List<Post> posts = CsvParser.parsePostsFromCsv(); // read CSV file data
                 analyzer.addAllPosts(posts); 
-            } catch (IOException e) { 
+            } catch (IOException e) {  // Throw an error if could not read the file
                 System.out.println("Error loading posts from CSV file: " + e.getMessage());
             }
         }
-
+        /// Create menu options structure
         private static void displayMainMenu() {
             System.out.println("---------------------------------------------------");
             System.out.println("> Select from main menu");

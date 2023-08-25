@@ -18,13 +18,13 @@ public class SocialMediaAnalyzerTest {
 	}
 	
 	@Test
-	public void testGetAllPosts() {
+	public void testGetAllPosts() { // test GetAllPosts functionality
 		List<Post> allPosts = analyzer.getAllPosts();
 		assertNotNull(allPosts);
 	}
 
 	@Test
-	public void testAddNewPost() {
+	public void testAddNewPost() { // test AllNewPost functionality
 		Post post = new Post(133, "Content test", "Test Author", 3000, 30001, LocalDateTime.now());
 		analyzer.addPost(post);
 		List<Post> posts = analyzer.getAllPosts();
@@ -32,7 +32,7 @@ public class SocialMediaAnalyzerTest {
 	}
 	
 	@Test
-	public void testAddAllPosts() {
+	public void testAddAllPosts() { // test AddAllPosts functionality (add a list of posts)
 		List<Post> newPosts = new ArrayList<>();
 		newPosts.add(new Post(134, "Content Test 1", "Author 1", 10, 11, LocalDateTime.now()));
 		newPosts.add(new Post(135, "Content Test 2", "Author 2", 12, 13, LocalDateTime.now()));
@@ -42,7 +42,7 @@ public class SocialMediaAnalyzerTest {
 	}
 	
 	@Test
-	public void testRemovePost() {
+	public void testRemovePost() { // test RemovePost functionality
 		Post post = new Post(1, "Test Content", "Test Author", 20, 21, LocalDateTime.now());
 		analyzer.addPost(post);
 		assertTrue(analyzer.removePost(1));

@@ -25,25 +25,27 @@ After running the app, you'll be presented with the main menu. Choose an option 
     You'll be prompted to provide details such as ID, content, author, likes, shares, and timestamp.
     Delete an existing social media post
 
-Use this option to delete an existing post by providing its ID.
-If the post is found and successfully removed, a confirmation message will be displayed.
-Retrieve a social media post
+2. <b>Delete an existing social media post</b>
+    Use this option to delete an existing post by providing its ID.
+    If the post is found and successfully removed, a confirmation message will be displayed.
+    Retrieve a social media post
 
-Retrieve a specific post by entering its ID.
-If the post exists, its details will be displayed. Otherwise, a message indicating that the post does not exist will appear.
-Retrieve the top N posts with most likes
+3. <b>Retrieve a social media post</b>
+    Retrieve a specific post by entering its ID.
+    If the post exists, its details will be displayed. Otherwise, a message indicating that the post does not exist will appear.
+    Retrieve the top N posts with most likes
 
-Retrieve the top N posts with the most likes.
-You'll be prompted to specify the value of N.
-The app will display the specified number of posts with the highest likes.
-Retrieve the top N posts with most shares
+4. <b>Retrieve the top N posts with the most likes.</b>
+    You'll be prompted to specify the value of N.
+    The app will display the specified number of posts with the highest likes.
+    Retrieve the top N posts with most shares
 
-Retrieve the top N posts with the most shares.
-You'll be prompted to specify the value of N.
-The app will display the specified number of posts with the highest shares.
-Exit
+5.<b>Retrieve the top N posts with the most shares.</b>
+    You'll be prompted to specify the value of N.
+    The app will display the specified number of posts with the highest shares.
 
-Select this option to exit the app
+6. <b>Exit</b>
+    Select this option to exit the app
 
 ## Features
 

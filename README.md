@@ -40,7 +40,7 @@ After running the app, you'll be presented with the main menu. Choose an option 
     The app will display the specified number of posts with the highest likes.
     Retrieve the top N posts with most shares
 
-5.<b>Retrieve the top N posts with the most shares.</b>
+5. <b>Retrieve the top N posts with the most shares.</b>
     You'll be prompted to specify the value of N.
     The app will display the specified number of posts with the highest shares.
 

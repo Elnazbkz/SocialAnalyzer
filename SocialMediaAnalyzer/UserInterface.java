@@ -77,7 +77,7 @@ public class UserInterface {
             while (author.isEmpty()) { // show an error if author name is empty
                 System.out.println("Author name cannot be empty. Please provide valid author name.");
                 System.out.print("Please provide the post author: ");
-                content = scanner.nextLine();
+                author = scanner.nextLine();
             }
 
             int likes;

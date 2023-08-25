@@ -66,7 +66,7 @@ Here is an example of the console environment for this java app
 4) Retrieve the top N posts with most likes
 5) Retrieve the top N posts with most shares
 6) Exit
-Please select: <span style="color:red">2</span>
+Please select: 2
 Please provide the post ID: 2222
 Sorry the post does not exist in the collection!
 ---------------------------------------------------

@@ -21,9 +21,9 @@ After running the app, you'll be presented with the main menu. Choose an option 
 
 1. <b>Add a social media post</b>
 
-This option allows you to add a new social media post to the collection.
-You'll be prompted to provide details such as ID, content, author, likes, shares, and timestamp.
-Delete an existing social media post
+    This option allows you to add a new social media post to the collection.
+    You'll be prompted to provide details such as ID, content, author, likes, shares, and timestamp.
+    Delete an existing social media post
 
 Use this option to delete an existing post by providing its ID.
 If the post is found and successfully removed, a confirmation message will be displayed.

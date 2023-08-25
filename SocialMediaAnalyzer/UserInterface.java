@@ -1,5 +1,5 @@
 package SocialMediaAnalyzer;
-import java.io.IOException; //thrown error when there's an issue with input/output operations
+import java.io.IOException; 
 import java.time.LocalDateTime; // date and time without a time zone
 import java.time.format.DateTimeFormatter; // format and parse dates and time based on selected pattern
 import java.time.format.DateTimeParseException;
@@ -16,10 +16,10 @@ public class UserInterface {
         }
 
         private void loadPostsFromCsv() {
-            try {
-                List<Post> posts = CsvParser.parsePostsFromCsv();
-                analyzer.addAllPosts(posts);
-            } catch (IOException e) {
+            try { // Load CSV file
+                List<Post> posts = CsvParser.parsePostsFromCsv(); // read CSV file data
+                analyzer.addAllPosts(posts); 
+            } catch (IOException e) { 
                 System.out.println("Error loading posts from CSV file: " + e.getMessage());
             }
         }

@@ -13,15 +13,15 @@ import java.util.List;
 public class CsvParser {
     private static final String CSV_FILE_NAME = "posts.csv"; // the csv file to load
     private static final String CSV_FILE_PATH = System.getProperty("user.dir") + File.separator + CSV_FILE_NAME; // Define csv file path on the system
-    //// dEFINE a method to retreive list of posts from csv file
+    //// Define a method to retreive list of posts from csv file
     public static List<Post> parsePostsFromCsv() throws IOException {
-        List<Post> posts = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(CSV_FILE_PATH))) { // try catch shows message on error
-            String line;
+        List<Post> posts = new ArrayList<>(); // degine post as Arraylist
+        try (BufferedReader br = new BufferedReader(new FileReader(CSV_FILE_PATH))) { // try catch to get file data and shows message on error
+            String line; // define line as string
             br.readLine(); // Skip header row
             while ((line = br.readLine()) != null) { // reading rest of lines
                 String[] values = line.split(","); // split values of each line by , and put into array
-                int id = Integer.parseInt(values[0].trim());
+                int id = Integer.parseInt(values[0].trim()); // get id of post
                 String content = values[1].trim();
                 String author = values[2].trim();
                 int likes = Integer.parseInt(values[3].trim());

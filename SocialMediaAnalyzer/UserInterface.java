@@ -66,6 +66,12 @@ public class UserInterface {
             }
             System.out.print("Please provide the post content: "); // get post content
             String content = scanner.nextLine();
+            while (content.isEmpty()) { // show an error if content is empty
+                System.out.println("Content cannot be empty. Please provide valid content.");
+                System.out.print("Please provide the post content: ");
+                content = scanner.nextLine();
+            }
+            
             System.out.print("Please provide the post author: "); // get post author
             String author = scanner.nextLine();
 

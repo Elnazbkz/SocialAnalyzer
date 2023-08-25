@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 public class SocialMediaAnalyzer {
-    private List<Post> posts; // list of all data of csv file
+    private List<Post> posts; // list of all data of CSV file
 
     /// constructor - initializing a list
     public SocialMediaAnalyzer() {
@@ -23,17 +23,17 @@ public class SocialMediaAnalyzer {
         return postDeleted;
     }
 
-    public Post retrievePost(int postId) { // retreive post by ID
+    public Post retrievePost(int postId) { // Retrieve post by ID
         for (Post post : posts) {
-            if (post.getId() == postId) {
+            if (post.getId() == postId) { // check if post if found then returns post data, otherwise returns null
                 return post;
             }
         }
         return null;
     }
-    /* This functions returns top N posts by likes */
+    /// This function returns top N posts by likes 
     public List<Post> getTopNPostsByLikes(int n) {
-        if (n < 0) {
+        if (n < 0) { // Exception to check the entered value is valid
             throw new IllegalArgumentException("n must be a non-negative value.");
         }
         List<Post> sortedPosts = new ArrayList<>(posts); // create a list of posts
@@ -42,14 +42,15 @@ public class SocialMediaAnalyzer {
         return sortedPosts.subList(0, numPostsToReturn); // returns the first index of sorted array
     }
 
+    /// This function returns top N posts by shares
     public List<Post> getTopNPostsByShares(int n) {
-        if (n < 0) {
+        if (n < 0) { // Exception to check the entered value is valid
             throw new IllegalArgumentException("n must be a non-negative value.");
         }
         List<Post> sortedPosts = new ArrayList<>(posts);
-        sortedPosts.sort(Comparator.comparingInt(Post::getShares).reversed());
+        sortedPosts.sort(Comparator.comparingInt(Post::getShares).reversed()); // sort by Shares - read each post's likes count and sort them, before that set comparing to Integer
         int numPostsToReturn = Math.min(n, sortedPosts.size());
-        return sortedPosts.subList(0, numPostsToReturn);
+        return sortedPosts.subList(0, numPostsToReturn); // returns the first index of sorted array
     }
 
 

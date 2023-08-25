@@ -128,12 +128,12 @@ public class UserInterface {
                 try {
                     dateTime = LocalDateTime.parse(dateTimeStr, DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
                     break; // Break the loop if parsing succeeds
-                } catch (DateTimeParseException e) {
+                } catch (DateTimeParseException e) { // format is not valid then throw an error
                     System.out.println("Invalid date and time format. Please provide the date and time in the format of DD/MM/YYYY HH:MM.");
                 }
             }
-            Post post = new Post(id, content, author, likes, shares, dateTime);
-            analyzer.addPost(post);
+            Post post = new Post(id, content, author, likes, shares, dateTime); 
+            analyzer.addPost(post); // add new post
             System.out.println("The post has been added to the collection!");
         }
 
@@ -152,7 +152,7 @@ public class UserInterface {
             
         }
 
-        //// render questions to retreive a post by ID
+        //// render questions to retrieve a post by ID
         private static void retrievePost(Scanner scanner, SocialMediaAnalyzer analyzer) {
             System.out.print("Please provide the post ID: ");
             int id = scanner.nextInt();
@@ -165,7 +165,7 @@ public class UserInterface {
             }
         }
 
-        //// render questions to retreive top n posts by likes
+        //// render questions to retrieve top n posts by likes
         private static void retrieveTopNPostsByLikes(Scanner scanner, SocialMediaAnalyzer analyzer) {
             System.out.print("Please specify the number of posts to retrieve (N): ");
             int n = scanner.nextInt();
@@ -175,7 +175,7 @@ public class UserInterface {
             displayPosts(topPosts);
         }
 
-        //// render questions to retreive top n posts by shares
+        //// render questions to retrieve top n posts by shares
         private static void retrieveTopNPostsByShares(Scanner scanner, SocialMediaAnalyzer analyzer) {
             System.out.print("Please specify the number of posts to retrieve (N): ");
             int n = scanner.nextInt();
@@ -187,8 +187,8 @@ public class UserInterface {
 
         /// Display post details
         private static void displayPosts(List<Post> posts) {
-            for (int i = 0; i < posts.size(); i++) {
-                System.out.println((i + 1) + ") " + posts.get(i));
+            for (int i = 0; i < posts.size(); i++) { // loop through all posts
+                System.out.println((i + 1) + ") " + posts.get(i)); // get post data
             }
         }
         

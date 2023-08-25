@@ -22,14 +22,14 @@ public class CsvParser {
             while ((line = br.readLine()) != null) { // reading rest of lines
                 String[] values = line.split(","); // split values of each line by , and put into array
                 int id = Integer.parseInt(values[0].trim()); // get id of post
-                String content = values[1].trim();
-                String author = values[2].trim();
-                int likes = Integer.parseInt(values[3].trim());
-                int shares = Integer.parseInt(values[4].trim());
-                LocalDateTime dateTime = LocalDateTime.parse(values[5].trim(),
-                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")); // format date and time
-                Post post = new Post(id, content, author, likes, shares, dateTime); // create an instance of post class using constractor
-                posts.add(post); // add values to posts list
+                String content = values[1].trim(); // get content of post
+                String author = values[2].trim(); // get author of post
+                int likes = Integer.parseInt(values[3].trim()); // get likes of post
+                int shares = Integer.parseInt(values[4].trim()); // get shares of post
+                LocalDateTime dateTime = LocalDateTime.parse(values[5].trim(), // get datetime of post
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")); // check format of the retrieved datetime
+                Post post = new Post(id, content, author, likes, shares, dateTime); // create an instance of post
+                posts.add(post); // add data to posts list
             }
         }
         return posts;

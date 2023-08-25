@@ -71,9 +71,14 @@ public class UserInterface {
                 System.out.print("Please provide the post content: ");
                 content = scanner.nextLine();
             }
-            
+            // Get author name
             System.out.print("Please provide the post author: "); // get post author
             String author = scanner.nextLine();
+            while (author.isEmpty()) { // show an error if author name is empty
+                System.out.println("Author name cannot be empty. Please provide valid author name.");
+                System.out.print("Please provide the post author: ");
+                content = scanner.nextLine();
+            }
 
             int likes;
             while (true) {

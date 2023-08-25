@@ -94,7 +94,7 @@ public class UserInterface {
                     }
                     
                     break; // Likes are valid
-                } catch (InputMismatchException e) {
+                } catch (InputMismatchException e) { // entered value is not valid
                     System.out.println("Invalid input. Please provide a valid integer value.");
                     scanner.nextLine(); // Consume the invalid input
                 }
@@ -114,7 +114,7 @@ public class UserInterface {
                     }
                     
                     break; // Likes are valid
-                } catch (InputMismatchException e) {
+                } catch (InputMismatchException e) { // entered value is not valid
                     System.out.println("Invalid input. Please provide a valid integer value.");
                     scanner.nextLine(); // Consume the invalid input
                 }

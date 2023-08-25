@@ -37,7 +37,7 @@ public class UserInterface {
             System.out.print("Please select: ");
         }
 
-        //// render questions to add a post
+        //// render questions to add a new post
         private static void addPost(Scanner scanner, SocialMediaAnalyzer analyzer) {
             int id;
             //// check the ID to be unique
@@ -60,8 +60,8 @@ public class UserInterface {
                     }
                     break; // ID is valid
                 } catch (InputMismatchException e) {
-                    System.out.println("Invalid input. Please provide a valid integer ID.");
-                    scanner.nextLine(); // Consume the invalid input
+                    System.out.println("Invalid input. Please provide a valid integer ID."); // Consume the invalid input
+                    scanner.nextLine(); //Consume the newline left by nextInt() 
                 }
             }
             //scanner.nextLine(); // Consume the newline left by nextInt()

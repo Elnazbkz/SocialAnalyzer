@@ -199,7 +199,7 @@ public class UserInterface {
             System.out.println("Welcome to Social Media Analyzer!");
             int choice;
             do {
-                displayMainMenu();
+                displayMainMenu(); // display menu options
                 choice = scanner.nextInt();
                 scanner.nextLine(); // Consume the newline left by nextInt()
                 try {
@@ -225,7 +225,7 @@ public class UserInterface {
                         default:
                             System.out.println("Invalid menu option. Please try again.");
                     }
-                } catch (Exception e) {
+                } catch (Exception e) { // if entered value is not a valid menu option
                     System.out.println("Error: " + e.getMessage());
                 }
             } while (choice != 6);

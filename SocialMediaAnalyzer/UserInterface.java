@@ -184,19 +184,58 @@ public class UserInterface {
 
         //// render questions to retrieve top n posts by likes
         private static void retrieveTopNPostsByLikes(Scanner scanner, SocialMediaAnalyzer analyzer) {
-            System.out.print("Please specify the number of posts to retrieve (N): ");
-            int n = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline left by nextInt()
+            int n;
+            
+            while (true) {
+                System.out.print("Please specify the number of posts to retrieve (N): ");
+                String input = scanner.nextLine();
+                
+                try {
+                    n = Integer.parseInt(input);
+                    
+                    if (n < 0) {
+                        System.out.println("Invalid value. Please provide a non-negative value.");
+                    }
+                    else if (n == 0) {
+                    	System.out.println("The provided value can not be zero");
+                    }
+                    else {
+                        break;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please provide a valid numeric value.");
+                }
+            }
+
             List<Post> topPosts = analyzer.getTopNPostsByLikes(n);
             System.out.println("The top-" + n + " posts with the most likes are:");
             displayPosts(topPosts);
         }
 
+
         //// render questions to retrieve top n posts by shares
         private static void retrieveTopNPostsByShares(Scanner scanner, SocialMediaAnalyzer analyzer) {
-            System.out.print("Please specify the number of posts to retrieve (N): ");
-            int n = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline left by nextInt()
+        	int n;
+        	while (true) {
+                System.out.print("Please specify the number of posts to retrieve (N): ");
+                String input = scanner.nextLine();
+                
+                try {
+                    n = Integer.parseInt(input);
+                    
+                    if (n < 0) {
+                        System.out.println("Invalid value. Please provide a non-negative value.");
+                    }
+                    else if (n == 0) {
+                    	System.out.println("The provided value can not be zero");
+                    }
+                    else {
+                        break;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please provide a valid numeric value.");
+                }
+            }
             List<Post> topPosts = analyzer.getTopNPostsByShares(n);
             System.out.println("The top-" + n + " posts with the most shares are:");
             displayPosts(topPosts);

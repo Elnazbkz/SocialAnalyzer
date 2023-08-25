@@ -74,13 +74,18 @@ public class Post {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"); // format of datetime
         return dateTime.format(formatter);
     }
-
-    public String toString(boolean topShares) { // return shares or likes for top n posts
-    	if(topShares) {
+    @Override
+    public String toString() { // return shares or likes for top n posts
+    		return id + " | " + content + " | " + likes;
+    }
+    
+    public String TopPostData(String ShareOrLike) {
+    	if(ShareOrLike == "shares") {
     		return id + " | " + content + " | " + shares;
     	}
     	else {
     		return id + " | " + content + " | " + likes;
     	}
     }
+  
 }

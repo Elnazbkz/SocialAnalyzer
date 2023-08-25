@@ -52,6 +52,109 @@ After running the app, you'll be presented with the main menu. Choose an option 
 
     Select this option to exit the app
 
+## Console Options Example
+Here is an example of the console environment for this java app
+<br/>
+<code>
+Welcome to Social Media Analyzer!
+---------------------------------------------------
+> Select from main menu
+----------------------------------------------------
+1) Add a social media post
+2) Delete an existing social media post
+3) Retrieve a social media post
+4) Retrieve the top N posts with most likes
+5) Retrieve the top N posts with most shares
+6) Exit
+Please select: 2
+Please provide the post ID: 2222
+Sorry the post does not exist in the collection!
+---------------------------------------------------
+> Select from main menu
+----------------------------------------------------
+1) Add a social media post
+2) Delete an existing social media post
+3) Retrieve a social media post
+4) Retrieve the top N posts with most likes
+5) Retrieve the top N posts with most shares
+6) Exit
+Please select: 1
+Please provide the post ID: 101
+Please provide the post content: Test Content
+Please provide the post author: Test Author
+Please provide the number of likes of the post: 20233
+Please provide the number of shares of the post: 10432
+Please provide the date and time of the post in the format of DD/MM/YYYY HH:MM: 11/11/2022 11:11
+The post has been added to the collection!
+---------------------------------------------------
+> Select from main menu
+----------------------------------------------------
+1) Add a social media post
+2) Delete an existing social media post
+3) Retrieve a social media post
+4) Retrieve the top N posts with most likes
+5) Retrieve the top N posts with most shares
+6) Exit
+Please select: 3
+Please provide the post ID: 1001
+Sorry, the post does not exist in the collection!
+---------------------------------------------------
+> Select from main menu
+----------------------------------------------------
+1) Add a social media post
+2) Delete an existing social media post
+3) Retrieve a social media post
+4) Retrieve the top N posts with most likes
+5) Retrieve the top N posts with most shares
+6) Exit
+Please select: 3
+Please provide the post ID: 101
+Retrieved post: 101 | Test Content | 20233
+---------------------------------------------------
+> Select from main menu
+----------------------------------------------------
+1) Add a social media post
+2) Delete an existing social media post
+3) Retrieve a social media post
+4) Retrieve the top N posts with most likes
+5) Retrieve the top N posts with most shares
+6) Exit
+Please select: 4
+Please specify the number of posts to retrieve (N): 10
+The top-10 posts with the most likes are:
+1) 101 | Test Content | 20233
+2) 382 | What a miracle! | 2775
+3) 10 | Check out this epic film. | 1000
+4) 37221 | Are we into Christmas month already?! | 526
+5) 36778 | Fantastic day today. Congratulations to all winners. | 230
+6) 20582 | Come and meet us at Building 14 of RMIT. | 10
+---------------------------------------------------
+> Select from main menu
+----------------------------------------------------
+1) Add a social media post
+2) Delete an existing social media post
+3) Retrieve a social media post
+4) Retrieve the top N posts with most likes
+5) Retrieve the top N posts with most shares
+6) Exit
+Please select: 5
+Please specify the number of posts to retrieve (N): 2
+The top-2 posts with the most shares are:
+1) 382 | What a miracle! | 13589
+2) 101 | Test Content | 10432
+---------------------------------------------------
+> Select from main menu
+----------------------------------------------------
+1) Add a social media post
+2) Delete an existing social media post
+3) Retrieve a social media post
+4) Retrieve the top N posts with most likes
+5) Retrieve the top N posts with most shares
+6) Exit
+Please select: 6
+Thanks for using Social Media Analyzer!
+</code>
+
 ## Features
 
 - Add, delete, and retrieve posts.

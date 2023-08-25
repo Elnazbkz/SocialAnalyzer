@@ -209,7 +209,7 @@ public class UserInterface {
 
             List<Post> topPosts = analyzer.getTopNPostsByLikes(n);
             System.out.println("The top-" + n + " posts with the most likes are:");
-            displayPosts(topPosts, false);
+            displayPosts(topPosts, "likes");
         }
 
 
@@ -238,15 +238,16 @@ public class UserInterface {
             }
             List<Post> topPosts = analyzer.getTopNPostsByShares(n);
             System.out.println("The top-" + n + " posts with the most shares are:");
-            displayPosts(topPosts, true);
+            displayPosts(topPosts, "shares");
         }
 
         /// Display post details
-        private static void displayPosts(List<Post> posts, boolean topShares) {
+        private static void displayPosts(List<Post> posts, String ShareOrLike) {
         	for (int i = 0; i < posts.size(); i++) {
-                System.out.println((i + 1) + ") " + posts.get(i).toString(topShares));
+                System.out.println((i + 1) + ") " + posts.get(i).TopPostData(ShareOrLike));
             }
         }
+        
         
 
         public void start() {

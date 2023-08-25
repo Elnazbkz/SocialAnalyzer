@@ -92,6 +92,10 @@ public class UserInterface {
                         System.out.println("Invalid number of likes. Please provide a non-negative value.");
                         continue;
                     }
+                    if (likes == 0) {
+                        System.out.println("Invalid number of likes. The value can not be zero.");
+                        continue;
+                    }
                     
                     break; // Likes are valid
                 } catch (InputMismatchException e) { // entered value is not valid
@@ -110,6 +114,10 @@ public class UserInterface {
                     // Check if shares are non-negative
                     if (shares < 0) {
                         System.out.println("Invalid number of likes. Please provide a non-negative value.");
+                        continue;
+                    }
+                    if (shares == 0) {
+                        System.out.println("Invalid number of shares. The value can not be zero.");
                         continue;
                     }
                     

@@ -154,9 +154,25 @@ public class UserInterface {
 
         //// render questions to retrieve a post by ID
         private static void retrievePost(Scanner scanner, SocialMediaAnalyzer analyzer) {
-            System.out.print("Please provide the post ID: ");
-            int id = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline left by nextInt()
+            int id;
+            
+            while (true) {
+                System.out.print("Please provide the post ID: ");
+                String input = scanner.nextLine();
+                
+                try {
+                    id = Integer.parseInt(input);
+                    
+                    if (id < 0) {
+                        System.out.println("Invalid ID. Please provide a non-negative value.");
+                    } else {
+                        break;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please provide a valid numeric ID.");
+                }
+            }
+
             Post post = analyzer.retrievePost(id);
             if (post != null) {
                 System.out.println("Retrieved post: " + post);
@@ -164,6 +180,7 @@ public class UserInterface {
                 System.out.println("Sorry, the post does not exist in the collection!");
             }
         }
+
 
         //// render questions to retrieve top n posts by likes
         private static void retrieveTopNPostsByLikes(Scanner scanner, SocialMediaAnalyzer analyzer) {
